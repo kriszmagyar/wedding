@@ -4,29 +4,16 @@
 
     "use strict";
 
-	// JQUERY LIGHT BOX
-	
-	if ( $.isFunction($.fn.fluidbox) ) {
-		$('a').fluidbox();
-	}
-
-	
 	$('a[href="#"]').on('click', function(event){
 		return;
 	});
-	
-	// COUNTDOWN TIME 
-	
+
 	countdownTime();
 	
-	
 	$('[data-nav-menu]').on('click', function(event){
-		
 		var $this = $(this),
 			visibleHeadArea = $this.data('nav-menu');
-		
 		$(visibleHeadArea).toggleClass('visible');
-		
 	});
 	
 	
@@ -37,11 +24,6 @@
 		dropdownMenu(winWidth);
 		
 	});
-	
-	// Circular Progress Bar
-	
-	var isAnimated = false;
-	
 	
 })(jQuery);
 
@@ -76,13 +58,13 @@ function dropdownMenu(winWidth){
 			menuAnchor.removeClass('mouseover');
 		});
 		
-	}else{
+	} else {
 		
 		$('.main-menu li.drop-down > a').on('click', function(){
 			
-			if($(this).attr('href') == '#') return false;
-			if($(this).hasClass('mouseover')){ $(this).removeClass('mouseover'); }
-			else{ $(this).addClass('mouseover'); }
+			if ($(this).attr('href') == '#') return false;
+			if ($(this).hasClass('mouseover')){ $(this).removeClass('mouseover'); }
+			else { $(this).addClass('mouseover'); }
 			return false;
 		});
 	}
