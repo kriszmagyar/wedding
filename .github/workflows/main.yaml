@@ -11,6 +11,6 @@ jobs:
     - name: Sync files
       uses: SamKirkland/FTP-Deploy-Action@4.0.0
       with:
-        server: wh14.rackhost.hu
+        server: wh21.rackhost.hu
         username: c20309krisz.magyar@gmail.com
         password: ${{ secrets.ftp_password }}
